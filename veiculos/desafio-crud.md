@@ -76,8 +76,5 @@ Configurar um banco de dados em memoria (H2).
 > [!IMPORTANT]
 > TAREFAS
 
-- [X] Criar repository do git
-- [] Criar estrutura do projsto5
-- [] text
-- [] text
-- [] text
+- [V] Criar repository do git
+- [] Criar estrutura do projsto
