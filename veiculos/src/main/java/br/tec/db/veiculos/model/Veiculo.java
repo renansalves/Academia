@@ -8,6 +8,14 @@ public class Veiculo {
 	private String modelo;
 	private Integer anoFabricacao;
 
+	public Veiculo(Long id, String tipo, String marca, String modelo, Integer anoFabricacao) {
+		this.id = id;
+		this.tipo = tipo;
+		this.marca = marca;
+		this.modelo = modelo;
+		this.anoFabricacao = anoFabricacao;
+	}
+
 	public Long getId() {
 		return id;
 	}

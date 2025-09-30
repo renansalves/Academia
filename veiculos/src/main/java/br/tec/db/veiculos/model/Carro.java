@@ -4,6 +4,10 @@ public class Carro extends Veiculo {
 
 	private Integer numeroPortas;
 
+	public Carro(Veiculo veiculo) {
+		super(veiculo.getId(), veiculo.getTipo(), veiculo.getMarca(), veiculo.getModelo(), veiculo.getAnoFabricacao());
+	}
+
 	public Integer getNumeroPortas() {
 		return numeroPortas;
 	}
