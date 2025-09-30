@@ -11,7 +11,7 @@ Criar uma **API RESTFUL** para gerenciar **veículos** , 🚗 🏍 🚛 aplicand
 
 Você precisa implementar um sistema que gerencie **veículos**. O sistema deve permitir:
 
-- Cadastrar difrntes tipos de veículos
+- Cadastrar diferentes tipos de veículos
 - Listar todos os veículos Cadastrados
 - Buscar um veículo por ID
 - Atualizar os dados de um veículo
@@ -43,6 +43,7 @@ Cada subclasse terá **atributos próprios:**
 | Carro | numeroPortas | Número de portas do carro | Integer |
 | Moto | temPartidaEletrica | Se tem ou não partida eletrica | Boolean |
 | Caminhão | capacidadeCarga | Capacidade máxima de carga em toneladas | Integer |
+
 3. Armazenar os veículos em um repositório JPA
 Configurar um banco de dados em memoria (H2).
 
@@ -76,5 +77,16 @@ Configurar um banco de dados em memoria (H2).
 > [!IMPORTANT]
 > TAREFAS
 
-- [V] Criar repository do git
-- [] Criar estrutura do projsto
+- [X] Criar repository do git
+- [X] Criar estrutura do Projeto
+- [X] Criar classe veiculos e seus derivados (Carro, Moto, Caminhão)
+- [ ] Criar os endpoints
+- [ ] criar o banco
+- [ ] criar o repository
+- [ ] tratamento d exeção
+- [ ] lombok
+- [ ] dto
+- [ ] Teste 
+- [ ] swagger 
+
+
