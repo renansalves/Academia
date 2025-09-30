@@ -1,6 +1,6 @@
 package br.tec.db.veiculos.model;
 
-public class moto extends veiculo {
+public class Moto extends Veiculo {
 
 	private Boolean temPartidaEletrica;
 

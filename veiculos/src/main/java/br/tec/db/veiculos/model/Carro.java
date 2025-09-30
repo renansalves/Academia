@@ -1,6 +1,6 @@
 package br.tec.db.veiculos.model;
 
-public class carro extends veiculo {
+public class Carro extends Veiculo {
 
 	private Integer numeroPortas;
 

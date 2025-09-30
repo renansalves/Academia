@@ -1,6 +1,6 @@
 package br.tec.db.veiculos.model;
 
-public class caminhao extends veiculo {
+public class Caminhao extends Veiculo {
 
 	private Integer capacidadeCarga;
 

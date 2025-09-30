@@ -1,6 +1,6 @@
 package br.tec.db.veiculos.model;
 
-public class veiculo {
+public class Veiculo {
 
 	private Long id;
 	private String tipo;
