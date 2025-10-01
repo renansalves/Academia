@@ -1,11 +1,28 @@
 package br.tec.db.veiculos.model;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "veiculo")
 public class Veiculo {
 
+	@Id
+	@Column(name = "id")
 	private Long id;
+
+	@Column(name = "tipo")
 	private String tipo;
+
+	@Column(name = "marca")
 	private String marca;
+
+	@Column(name = "modelo")
 	private String modelo;
+
+	@Column(name = "anoFabricacao")
 	private Integer anoFabricacao;
 
 	public Veiculo(Long id, String tipo, String marca, String modelo, Integer anoFabricacao) {
