@@ -8,6 +8,10 @@ public class Carro extends Veiculo {
 		super(veiculo.getId(), veiculo.getTipo(), veiculo.getMarca(), veiculo.getModelo(), veiculo.getAnoFabricacao());
 	}
 
+	public Carro() {
+		super(null, null, null, null, null);
+	}
+
 	public Integer getNumeroPortas() {
 		return numeroPortas;
 	}

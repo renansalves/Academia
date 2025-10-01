@@ -8,6 +8,10 @@ public class Caminhao extends Veiculo {
 		super(veiculo.getId(), veiculo.getTipo(), veiculo.getMarca(), veiculo.getModelo(), veiculo.getAnoFabricacao());
 	}
 
+	public Caminhao() {
+		super(null, null, null, null, null);
+	}
+
 	public Integer getCapacidadeCarga() {
 		return capacidadeCarga;
 	}

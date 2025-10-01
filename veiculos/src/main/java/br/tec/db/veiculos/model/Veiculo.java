@@ -52,6 +52,13 @@ public class Veiculo {
 		return anoFabricacao;
 	}
 
+	@Override
+	public String toString() {
+		return "Veiculo [id=" + id + ", tipo=" + tipo + ", marca=" + marca + ", modelo=" + modelo + ", anoFabricacao="
+				+ anoFabricacao + ", getId()=" + getId() + ", getTipo()=" + getTipo() + ", getMarca()=" + getMarca()
+				+ ", getModelo()=" + getModelo() + ", getAnoFabricacao()=" + getAnoFabricacao() + "]";
+	}
+
 	public void setAnoFabricacao(Integer anoFabricacao) {
 		this.anoFabricacao = anoFabricacao;
 	}

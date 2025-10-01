@@ -1,6 +1,22 @@
 
 # Atividade 1 - Criação de um crud básico
 
+<!--toc:start-->
+- [Atividade 1 - Criação de um crud básico](#atividade-1-criação-de-um-crud-básico)
+  - [Especificações do problema](#especificações-do-problema)
+  - [Tipos de veículo](#tipos-de-veículo)
+  - [Requisitos Técnicos](#requisitos-técnicos)
+  - [🛠 Estrutura do Projeto](#🛠-estrutura-do-projeto)
+  - [🚀 O que será avaliado?](#🚀-o-que-será-avaliado)
+  - [🔥 Bônus (Opcional)](#🔥-bônus-opcional)
+  - [● Criar DTOs para entrada e saída de dados
+● Implementar validações com anotações Lombok
+● Criar tratamento de exceções personalizado
+● Implementar Swagger
+● Implementar testes de integração
+----------](#criar-dtos-para-entrada-e-saída-de-dados-implementar-validações-com-anotações-lombok-criar-tratamento-de-exceções-personalizado-implementar-swagger-implementar-testes-de-integração)
+<!--toc:end-->
+
 Criar uma **API RESTFUL** para gerenciar **veículos** , 🚗 🏍 🚛 aplicando conceitos de:
 
 - **Orientação a objeto**
@@ -8,7 +24,6 @@ Criar uma **API RESTFUL** para gerenciar **veículos** , 🚗 🏍 🚛 aplicand
 - Lombok
 
 ## Especificações do problema
-
 Você precisa implementar um sistema que gerencie **veículos**. O sistema deve permitir:
 
 - Cadastrar diferentes tipos de veículos
@@ -18,7 +33,7 @@ Você precisa implementar um sistema que gerencie **veículos**. O sistema deve 
 - Remover um veículo
 - Tratar exceções de forma adequada
 
-## **Tipos de veículo**
+## Tipos de veículo
 
 1. Carro
 2. Moto
@@ -73,9 +88,11 @@ Configurar um banco de dados em memoria (H2).
 ● Criar tratamento de exceções personalizado
 ● Implementar Swagger
 ● Implementar testes de integração
+----------
 
 > [!IMPORTANT]
 > TAREFAS
+
 
 - [X] Criar repository do git
 - [X] Criar estrutura do Projeto
