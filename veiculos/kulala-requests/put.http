@@ -1,0 +1,40 @@
+
+PUT http://localhost:8080/veiculos/carro/7
+Accept: application/json
+Content-Type: application/json
+
+{ 
+  "tipo": "Carro",
+  "marca": "BMW",
+  "modelo": "IX3",
+  "anoFabricacao": 2020,
+  "numeroPortas": 5
+}
+###
+
+PUT http://localhost:8080/veiculos/moto/5
+Accept: application/json
+Content-Type: application/json
+
+{
+    "tipo": "Moto",
+    "marca": "Honda",
+    "modelo": "CG 160",
+    "anoFabricacao": 2022,
+    "temPartidaEletrica": true
+  }
+
+
+###
+
+PUT http://localhost:8080/veiculos/caminhao/3
+Accept: application/json
+Content-Type: application/json
+
+{ 
+    "tipo": "Caminhao",
+    "marca": "Mercedez",
+    "modelo": "Bau",
+    "anoFabricacao": 1997,
+    "capacidadeCarga": 2000
+}

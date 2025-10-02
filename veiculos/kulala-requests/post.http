@@ -1,0 +1,61 @@
+POST http://localhost:8080/veiculos/moto
+Accept: application/json
+Content-Type: application/json
+
+{ "tipo": "Moto",
+  "marca": "Voltz",
+  "modelo": "EVS",
+  "anoFabricacao": 2023
+}
+###
+POST http://localhost:8080/veiculos/moto
+Accept: application/json
+Content-Type: application/json
+
+{ "tipo": "Moto",
+  "marca": "Honda",
+  "modelo": "CG 160",
+  "anoFabricacao": 2022
+}
+###
+POST http://localhost:8080/veiculos/carro
+Accept: application/json
+Content-Type: application/json
+
+{ "tipo": "Carro",
+  "marca": "BMW",
+  "modelo": "IX3",
+  "anoFabricacao": 2020
+}
+###
+POST http://localhost:8080/veiculos/carro
+Accept: application/json
+Content-Type: application/json
+
+{ "tipo": "Carro",
+  "marca": "BYD",
+  "modelo": "Dolphin",
+  "anoFabricacao": 2024
+}
+###
+POST http://localhost:8080/veiculos/caminhao
+Accept: application/json
+Content-Type: application/json
+
+{ "tipo": "Caminhao",
+  "marca": "Mercedez",
+  "modelo": "Bau",
+  "anoFabricacao": 1997
+}
+###
+POST http://localhost:8080/veiculos/caminhao
+Accept: application/json
+Content-Type: application/json
+
+{ "tipo": "Caminhao",
+  "marca": "Mercedez",
+  "modelo": "Atego 1719",
+  "anoFabricacao": 2025
+}
+###
+

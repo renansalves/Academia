@@ -1,0 +1,5 @@
+DELETE http://localhost:8080/veiculos/moto/2
+###
+DELETE http://localhost:8080/veiculos/carro/6
+###
+DELETE http://localhost:8080/veiculos/caminhao/4

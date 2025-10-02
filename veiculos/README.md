@@ -97,9 +97,9 @@ Configurar um banco de dados em memoria (H2).
 - [X] Criar repository do git
 - [X] Criar estrutura do Projeto
 - [X] Criar classe veiculos e seus derivados (Carro, Moto, Caminhão)
-- [ ] Criar os endpoints
-- [ ] criar o banco
-- [ ] criar o repository
+- [X] Criar os endpoints
+- [X] criar o banco
+- [X] criar o repository
 - [ ] tratamento d exeção
 - [ ] lombok
 - [ ] dto

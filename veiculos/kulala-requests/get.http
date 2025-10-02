@@ -1,0 +1,21 @@
+GET http://localhost:8080/veiculos/moto
+Accept: application/json
+###
+GET http://localhost:8080/veiculos/moto/1
+Accept: application/json
+###
+GET http://localhost:8080/veiculos/carro/2
+Accept: application/json
+###
+GET http://localhost:8080/veiculos/carro
+Accept: application/json
+###
+GET http://localhost:8080/veiculos/caminhao/4
+Accept: application/json
+###
+GET http://localhost:8080/veiculos/caminhao
+Accept: application/json
+###
+GET http://localhost:8080/veiculos
+Accept: application/json
+###
