@@ -7,8 +7,16 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Inheritance;
 import jakarta.persistence.InheritanceType;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 @Inheritance(strategy = InheritanceType.JOINED)
 @Table(name = "veiculo")
 public class Veiculo {
@@ -20,14 +28,6 @@ public class Veiculo {
 	private String marca;
 	private String modelo;
 	private Integer anoFabricacao;
-
-	public Veiculo(Long id, String tipo, String marca, String modelo, Integer anoFabricacao) {
-		this.id = id;
-		this.tipo = tipo;
-		this.marca = marca;
-		this.modelo = modelo;
-		this.anoFabricacao = anoFabricacao;
-	}
 
 	public Long getId() {
 		return id;
