@@ -4,19 +4,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import br.tec.db.veiculos.dto.VeiculoDto;
 import br.tec.db.veiculos.model.Veiculo;
 import br.tec.db.veiculos.repository.VeiculosRepository;
 import br.tec.db.veiculos.util.ConverterVeiculo;
 
+@Service
 public class VeiculoService {
 
   @Autowired
   private VeiculosRepository veiculosrepository;
 
   @Autowired
-  ConverterVeiculo converterVeiculo;
+  private ConverterVeiculo converterVeiculo;
 
   public List<VeiculoDto> listarVeiculos() {
     List<Veiculo> listaVeiculos = veiculosrepository.findAll();

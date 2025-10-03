@@ -5,6 +5,6 @@ import lombok.EqualsAndHashCode;
 
 @Data
 @EqualsAndHashCode(callSuper = true)
-public class MotoDto extends VeiculoDto{
+public class MotoDto extends VeiculoDto {
   private Boolean partidaEletrica;
 };

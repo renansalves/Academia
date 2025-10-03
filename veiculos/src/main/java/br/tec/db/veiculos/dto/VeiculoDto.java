@@ -13,4 +13,4 @@ public abstract class VeiculoDto {
   private String modelo;
   private String tipo;
   private Integer anoFabricacao;
-};
+}

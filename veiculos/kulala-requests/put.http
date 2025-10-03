@@ -12,7 +12,7 @@ Content-Type: application/json
 }
 ###
 
-PUT http://localhost:8080/veiculos/moto/5
+PUT http://localhost:8080/veiculos/moto/1
 Accept: application/json
 Content-Type: application/json
 
@@ -21,7 +21,7 @@ Content-Type: application/json
     "marca": "Honda",
     "modelo": "CG 160",
     "anoFabricacao": 2022,
-    "temPartidaEletrica": true
+    "temPartidaEletrica": false
   }
 
 

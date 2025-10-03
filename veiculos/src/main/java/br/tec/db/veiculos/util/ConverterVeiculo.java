@@ -1,8 +1,11 @@
 package br.tec.db.veiculos.util;
 
+import org.springframework.stereotype.Component;
+
 import br.tec.db.veiculos.dto.VeiculoDto;
 import br.tec.db.veiculos.model.Veiculo;
 
+@Component
 public class ConverterVeiculo {
 
   public VeiculoDto converterParaDto(Veiculo veiculo) {

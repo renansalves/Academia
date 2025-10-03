@@ -5,7 +5,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -52,15 +51,6 @@ public class CaminhaoController {
           return ResponseEntity.ok(caminhaoRepository.save(caminhao));
         })
         .orElse(ResponseEntity.notFound().build());
-  }
-
-  @DeleteMapping(path = "caminhao/{id}")
-  public ResponseEntity<Void> remover(@PathVariable("id") Long id) {
-    if (caminhaoRepository.existsById(id)) {
-      caminhaoRepository.deleteById(id);
-      return ResponseEntity.noContent().build();
-    }
-    return ResponseEntity.notFound().build();
   }
 
 }

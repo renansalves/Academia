@@ -5,7 +5,8 @@ Content-Type: application/json
 { "tipo": "Moto",
   "marca": "Voltz",
   "modelo": "EVS",
-  "anoFabricacao": 2023
+  "anoFabricacao": 2023,
+  "temPartidaEletrica":true
 }
 ###
 POST http://localhost:8080/veiculos/moto
