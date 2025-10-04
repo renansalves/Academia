@@ -1,4 +1,3 @@
-
 package br.tec.db.veiculos.util;
 
 import org.springframework.stereotype.Component;
@@ -7,9 +6,9 @@ import br.tec.db.veiculos.dto.CaminhaoDto;
 import br.tec.db.veiculos.model.Caminhao;
 
 @Component
-public class ConverterCaminhao extends ConverterCarro {
+public class ConverterCaminhao extends ConverterVeiculo {
 
-  public CaminhaoDto converterParaDto(CaminhaoDto caminhao) {
+  public CaminhaoDto converterParaDto(Caminhao caminhao) {
 
     CaminhaoDto dto = new CaminhaoDto();
     dto.setMarca(caminhao.getMarca());

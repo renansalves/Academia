@@ -78,7 +78,8 @@ Configurar um banco de dados em memoria (H2).
 ✅ Uso do Lombok
 ✅ Boas práticas de código (organização, separação por camadas)
 ✅ Tratamento de exceções
-✅ Uso correto do Spring Data JPA para persistência. ✅ CRUD funcionando corretamente
+✅ Uso correto do Spring Data JPA para persistência. 
+✅ CRUD funcionando corretamente
 ✅ Testes unitários
 
 ## 🔥 Bônus (Opcional)
@@ -98,12 +99,12 @@ Configurar um banco de dados em memoria (H2).
 - [X] Criar estrutura do Projeto
 - [X] Criar classe veiculos e seus derivados (Carro, Moto, Caminhão)
 - [X] Criar os endpoints
-- [X] criar o banco
-- [X] criar o repository
-- [ ] tratamento d exeção
-- [ ] lombok
-- [ ] dto
+- [X] Criar o banco
+- [X] Criar o repository
+- [ ] Tratamento de exeção
+- [X] Lombok
+- [ ] Dto
 - [ ] Teste 
-- [ ] swagger 
+- [ ] Swagger 
 
 
