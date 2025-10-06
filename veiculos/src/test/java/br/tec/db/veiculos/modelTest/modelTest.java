@@ -32,10 +32,13 @@ public class modelTest {
 		modelo = "EZ1";
 		tipo = "Moto";
 		int anoFabricacao = 2023;
-		veiculo = new Veiculo(id, tipo, marca, modelo, anoFabricacao);
 		Boolean temPartidaEltrica = true;
 
-		Moto moto = new Moto(veiculo);
+		Moto moto = new Moto();
+		moto.setTipo(tipo);
+		moto.setModelo(modelo);
+		moto.setMarca(marca);
+		moto.setAnoFabricacao(anoFabricacao);
 		moto.setTemPartidaEletrica(temPartidaEltrica);
 
 		assertEquals(moto.getModelo(), modelo);
@@ -51,10 +54,13 @@ public class modelTest {
 		modelo = "Atego 1719";
 		tipo = "Caminhao";
 		int anoFabricacao = 2025;
-		veiculo = new Veiculo(id, tipo, marca, modelo, anoFabricacao);
 		int capacidadeCarga = 1500;
 
-		Caminhao caminhao = new Caminhao(veiculo);
+		Caminhao caminhao = new Caminhao();
+		caminhao.setTipo(tipo);
+		caminhao.setMarca(marca);
+		caminhao.setModelo(modelo);
+		caminhao.setAnoFabricacao(anoFabricacao);
 		caminhao.setCapacidadeCarga(capacidadeCarga);
 
 		assertEquals(caminhao.getModelo(), modelo);
@@ -70,10 +76,13 @@ public class modelTest {
 		modelo = "Dolphin Mini";
 		tipo = "Carro";
 		int anoFabricacao = 2024;
-		veiculo = new Veiculo(id, tipo, marca, modelo, anoFabricacao);
 		int numeroPortas = 5;
 
-		Carro carro = new Carro(veiculo);
+		Carro carro = new Carro();
+		carro.setTipo(tipo);
+		carro.setMarca(marca);
+		carro.setModelo(modelo);
+		carro.setAnoFabricacao(anoFabricacao);
 		carro.setNumeroPortas(numeroPortas);
 
 		assertEquals(carro.getModelo(), modelo);

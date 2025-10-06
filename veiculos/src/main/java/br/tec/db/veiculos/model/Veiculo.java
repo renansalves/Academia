@@ -1,5 +1,8 @@
 package br.tec.db.veiculos.model;
 
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -7,73 +10,41 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Inheritance;
 import jakarta.persistence.InheritanceType;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.Setter;
 
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 @Inheritance(strategy = InheritanceType.JOINED)
 @Table(name = "veiculo")
-public class Veiculo {
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "tipo")
+@JsonSubTypes({
+        @JsonSubTypes.Type(value = Carro.class, name = "Carro"),
+        @JsonSubTypes.Type(value = Moto.class, name = "Moto"),
+        @JsonSubTypes.Type(value = Caminhao.class, name = "Caminhao")
+})
+public abstract class Veiculo {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-	private String tipo;
-	private String marca;
-	private String modelo;
-	private Integer anoFabricacao;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @NonNull
+    private Long id;
 
-	public Veiculo(Long id, String tipo, String marca, String modelo, Integer anoFabricacao) {
-		this.id = id;
-		this.tipo = tipo;
-		this.marca = marca;
-		this.modelo = modelo;
-		this.anoFabricacao = anoFabricacao;
-	}
+    @NonNull
+    private String tipo;
+    private String marca;
+    private String modelo;
+    private Integer anoFabricacao;
 
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getTipo() {
-		return tipo;
-	}
-
-	public void setTipo(String tipo) {
-		this.tipo = tipo;
-	}
-
-	public String getMarca() {
-		return marca;
-	}
-
-	public void setMarca(String marca) {
-		this.marca = marca;
-	}
-
-	public String getModelo() {
-		return modelo;
-	}
-
-	public void setModelo(String modelo) {
-		this.modelo = modelo;
-	}
-
-	public Integer getAnoFabricacao() {
-		return anoFabricacao;
-	}
-
-	@Override
-	public String toString() {
-		return "Veiculo [id=" + id + ", tipo=" + tipo + ", marca=" + marca + ", modelo=" + modelo + ", anoFabricacao="
-				+ anoFabricacao + ", getId()=" + getId() + ", getTipo()=" + getTipo() + ", getMarca()=" + getMarca()
-				+ ", getModelo()=" + getModelo() + ", getAnoFabricacao()=" + getAnoFabricacao() + "]";
-	}
-
-	public void setAnoFabricacao(Integer anoFabricacao) {
-		this.anoFabricacao = anoFabricacao;
-	}
-
+    @Override
+    public String toString() {
+        return "Veiculo [id=" + id + ", tipo=" + tipo + ", marca=" + marca + ", modelo=" + modelo + ", anoFabricacao="
+                + anoFabricacao + "]";
+    }
 }

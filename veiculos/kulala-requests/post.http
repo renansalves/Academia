@@ -1,61 +1,67 @@
-POST http://localhost:8080/veiculos/moto
+POST http://localhost:8080/veiculos
 Accept: application/json
 Content-Type: application/json
 
 { "tipo": "Moto",
   "marca": "Voltz",
   "modelo": "EVS",
-  "anoFabricacao": 2023
+  "anoFabricacao": 2023,
+  "temPartidaEletrica":true
 }
 ###
-POST http://localhost:8080/veiculos/moto
+POST http://localhost:8080/veiculos
 Accept: application/json
 Content-Type: application/json
 
-{ "tipo": "Moto",
+{ "kipo": "Moto",
   "marca": "Honda",
   "modelo": "CG 160",
-  "anoFabricacao": 2022
+  "anoFabricacao": 2022,
+  "temPartidaEletrica":true
 }
 ###
-POST http://localhost:8080/veiculos/carro
+POST http://localhost:8080/veiculos
 Accept: application/json
 Content-Type: application/json
 
 { "tipo": "Carro",
   "marca": "BMW",
   "modelo": "IX3",
-  "anoFabricacao": 2020
+  "anoFabricacao": 2020,
+  "numeroPortas":5
 }
 ###
-POST http://localhost:8080/veiculos/carro
+POST http://localhost:8080/veiculos
 Accept: application/json
 Content-Type: application/json
 
 { "tipo": "Carro",
   "marca": "BYD",
   "modelo": "Dolphin",
-  "anoFabricacao": 2024
+  "anoFabricacao": 2024,
+  "numeroPortas":5
 }
 ###
-POST http://localhost:8080/veiculos/caminhao
+POST http://localhost:8080/veiculos
 Accept: application/json
 Content-Type: application/json
 
 { "tipo": "Caminhao",
   "marca": "Mercedez",
   "modelo": "Bau",
-  "anoFabricacao": 1997
+  "anoFabricacao": 1997,
+  "capacidadeCarga": 1
 }
 ###
-POST http://localhost:8080/veiculos/caminhao
+POST http://localhost:8080/veiculos
 Accept: application/json
 Content-Type: application/json
 
 { "tipo": "Caminhao",
   "marca": "Mercedez",
   "modelo": "Atego 1719",
-  "anoFabricacao": 2025
+  "anoFabricacao": 2025,
+  "capacidadeCarga": 3
 }
 ###
 
