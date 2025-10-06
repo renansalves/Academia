@@ -12,7 +12,7 @@ Content-Type: application/json
 }
 ###
 
-PUT http://localhost:8080/veiculos/moto/1
+PUT http://localhost:8080/veiculos/2
 Accept: application/json
 Content-Type: application/json
 

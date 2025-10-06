@@ -54,7 +54,6 @@ public class modelTest {
 		modelo = "Atego 1719";
 		tipo = "Caminhao";
 		int anoFabricacao = 2025;
-		veiculo = new Veiculo(id, tipo, marca, modelo, anoFabricacao);
 		int capacidadeCarga = 1500;
 
 		Caminhao caminhao = new Caminhao();
@@ -77,7 +76,6 @@ public class modelTest {
 		modelo = "Dolphin Mini";
 		tipo = "Carro";
 		int anoFabricacao = 2024;
-		veiculo = new Veiculo(id, tipo, marca, modelo, anoFabricacao);
 		int numeroPortas = 5;
 
 		Carro carro = new Carro();
