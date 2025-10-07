@@ -13,7 +13,7 @@ POST http://localhost:8080/veiculos
 Accept: application/json
 Content-Type: application/json
 
-{ "kipo": "Moto",
+{ "tipo": "Moto",
   "marca": "Honda",
   "modelo": "CG 160",
   "anoFabricacao": 2022,
