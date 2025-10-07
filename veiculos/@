@@ -49,17 +49,14 @@ public class VeiculoService {
 
         Veiculo veiculoExistente = veiculoOptional.get();
 
-if (veiculo.getAnoFabricacao() != null)
-    veiculoExistente.setAnoFabricacao(veiculo.getAnoFabricacao());
-
-if (veiculo.getModelo() != null)
-    veiculoExistente.setModelo(veiculo.getModelo());
-
-if (veiculo.getMarca() != null)
-    veiculoExistente.setMarca(veiculo.getMarca());
-
-if (veiculo.getTipo() != null)
-    veiculoExistente.setTipo(veiculo.getTipo());
+        if (veiculo.getAnoFabricacao().equals(null))
+            veiculoExistente.setAnoFabricacao(veiculo.getAnoFabricacao());
+        if (veiculo.getModelo().equals(null))
+            veiculoExistente.setModelo(veiculo.getModelo());
+        if (veiculo.getMarca().equals(null))
+            veiculoExistente.setMarca(veiculo.getMarca());
+        if (veiculo.getTipo().equals(null))
+            veiculoExistente.setTipo(veiculo.getTipo());
 
         // Atualiza campos específicos conforme o tipo
         if (veiculoExistente instanceof Moto && veiculo instanceof Moto) {
