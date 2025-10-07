@@ -1,12 +1,11 @@
 package br.tec.db.veiculos.model;
 
-import com.sun.istack.NotNull;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
 import lombok.Setter;
 
 @Entity
@@ -17,7 +16,7 @@ import lombok.Setter;
 @AllArgsConstructor
 public class Moto extends Veiculo {
 
-	@NotNull
+	@NonNull
 	private Boolean temPartidaEletrica;
 
 }

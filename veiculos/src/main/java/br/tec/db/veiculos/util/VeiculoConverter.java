@@ -57,7 +57,7 @@ public class VeiculoConverter {
     }
   }
 
-  public Veiculo converterParaDto(VeiculoDto veiculoDto) {
+  public Veiculo converterParaEntidade(VeiculoDto veiculoDto) {
     if (veiculoDto instanceof MotoDto) {
 
       MotoDto motoDto = (MotoDto) veiculoDto;

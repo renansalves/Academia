@@ -36,5 +36,5 @@ Content-Type: application/json
     "marca": "Mercedez",
     "modelo": "Bau",
     "anoFabricacao": 1997,
-    "capacidadeCarga": 2000
+    "capacidadeCarga": 2
 }

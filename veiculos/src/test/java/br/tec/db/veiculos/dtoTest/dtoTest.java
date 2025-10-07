@@ -1,32 +1,22 @@
-package br.tec.db.veiculos.modelTest;
+package br.tec.db.veiculos.dtoTest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
-import br.tec.db.veiculos.model.Caminhao;
-import br.tec.db.veiculos.model.Carro;
-import br.tec.db.veiculos.model.Moto;
-import br.tec.db.veiculos.model.Veiculo;
+import br.tec.db.veiculos.dto.*;
 
 @ActiveProfiles("test")
 @SpringBootTest
-public class modelTest {
+public class dtoTest {
 
-	long id = System.currentTimeMillis();
 	String marca;
 	String modelo;
 	String tipo;
 	int anoFabricacao;
-	Veiculo veiculo;
-
-	@BeforeEach
-	public void init() {
-		id = System.currentTimeMillis();
-	}
+	VeiculoDto veiculo;
 
 	@Test
 	public void criarUmaMoto() {
@@ -36,18 +26,18 @@ public class modelTest {
 		int anoFabricacao = 2023;
 		Boolean temPartidaEltrica = true;
 
-		Moto moto = new Moto();
+		MotoDto moto = new MotoDto();
 		moto.setTipo(tipo);
 		moto.setModelo(modelo);
 		moto.setMarca(marca);
 		moto.setAnoFabricacao(anoFabricacao);
-		moto.setTemPartidaEletrica(temPartidaEltrica);
+		moto.setPartidaEletrica(temPartidaEltrica);
 
 		assertEquals(moto.getModelo(), modelo);
 		assertEquals(moto.getMarca(), marca);
 		assertEquals(moto.getTipo(), tipo);
 		assertEquals(moto.getAnoFabricacao(), anoFabricacao);
-		assertEquals(moto.getTemPartidaEletrica(), temPartidaEltrica);
+		assertEquals(moto.getPartidaEletrica(), temPartidaEltrica);
 	}
 
 	@Test
@@ -58,7 +48,7 @@ public class modelTest {
 		int anoFabricacao = 2025;
 		int capacidadeCarga = 1500;
 
-		Caminhao caminhao = new Caminhao();
+		CaminhaoDto caminhao = new CaminhaoDto();
 		caminhao.setTipo(tipo);
 		caminhao.setMarca(marca);
 		caminhao.setModelo(modelo);
@@ -80,7 +70,7 @@ public class modelTest {
 		int anoFabricacao = 2024;
 		int numeroPortas = 5;
 
-		Carro carro = new Carro();
+		CarroDto carro = new CarroDto();
 		carro.setTipo(tipo);
 		carro.setMarca(marca);
 		carro.setModelo(modelo);

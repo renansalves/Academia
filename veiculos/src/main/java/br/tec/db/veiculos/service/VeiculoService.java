@@ -37,7 +37,7 @@ public class VeiculoService {
     public VeiculoDto salvarVeiculo(Veiculo veiculo) {
         VeiculoDto veiculoDto = veiculoConverter.converterParaDto(veiculo);
 
-        veiculosRepository.save(veiculo);
+        System.out.println("id: " + veiculosRepository.save(veiculo).getId());
         return veiculoDto;
     }
 
@@ -49,11 +49,14 @@ public class VeiculoService {
 
         Veiculo veiculoExistente = veiculoOptional.get();
 
-        // Atualiza campos comuns
-        veiculoExistente.setAnoFabricacao(veiculo.getAnoFabricacao());
-        veiculoExistente.setModelo(veiculo.getModelo());
-        veiculoExistente.setMarca(veiculo.getMarca());
-        veiculoExistente.setTipo(veiculo.getTipo());
+        if (veiculo.getAnoFabricacao().equals(null))
+            veiculoExistente.setAnoFabricacao(veiculo.getAnoFabricacao());
+        if (veiculo.getModelo().equals(null))
+            veiculoExistente.setModelo(veiculo.getModelo());
+        if (veiculo.getMarca().equals(null))
+            veiculoExistente.setMarca(veiculo.getMarca());
+        if (veiculo.getTipo().equals(null))
+            veiculoExistente.setTipo(veiculo.getTipo());
 
         // Atualiza campos específicos conforme o tipo
         if (veiculoExistente instanceof Moto && veiculo instanceof Moto) {

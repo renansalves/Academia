@@ -1,0 +1,45 @@
+
+[
+    {
+        "tipo": "Moto",
+        "marca": "Honda",
+        "modelo": "CG 160",
+        "anoFabricacao": 2022,
+        "partidaEletrica": true
+    },
+    {
+        "tipo": "Carro",
+        "marca": "Toyota",
+        "modelo": "Corolla",
+        "anoFabricacao": 2021,
+        "numeroPortas": 4
+    },
+    {
+        "tipo": "Caminhao",
+        "marca": "Volvo",
+        "modelo": "FH",
+        "anoFabricacao": 2020,
+        "capacidadeCarga": 18000
+    },
+    {
+        "tipo": "Moto",
+        "marca": "Yamaha",
+        "modelo": "Fazer 250",
+        "anoFabricacao": 2023,
+        "partidaEletrica": false
+    },
+    {
+        "tipo": "Carro",
+        "marca": "Ford",
+        "modelo": "Ka",
+        "anoFabricacao": 2019,
+        "numeroPortas": 2
+    },
+    {
+        "tipo": "Caminhao",
+        "marca": "Mercedes-Benz",
+        "modelo": "Actros",
+        "anoFabricacao": 2022,
+        "capacidadeCarga": 25000
+    }
+]

@@ -1,7 +1,6 @@
 package br.tec.db.veiculos.model;
 
-import com.sun.istack.NotNull;
-
+import io.micrometer.common.lang.NonNull;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -17,7 +16,7 @@ import lombok.Setter;
 @AllArgsConstructor
 public class Carro extends Veiculo {
 
-	@NotNull
+	@NonNull
 	private Integer numeroPortas;
 
 }
