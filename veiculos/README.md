@@ -103,8 +103,8 @@ Configurar um banco de dados em memoria (H2).
 - [X] Criar o repository
 - [ ] Tratamento de exeção
 - [X] Lombok
-- [ ] Dto
-- [ ] Teste 
-- [ ] Swagger 
+- [X] Dto
+- [X] Teste 
+- [X] Swagger 
 
 
