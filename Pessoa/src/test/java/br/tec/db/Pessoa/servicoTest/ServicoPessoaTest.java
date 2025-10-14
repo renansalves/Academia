@@ -1,0 +1,70 @@
+package br.tec.db.Pessoa.servicoTest;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
+
+import br.tec.db.Pessoa.Servico.ServicoPessoa;
+import br.tec.db.Pessoa.dto.*;
+import br.tec.db.Pessoa.model.*;
+import br.tec.db.Pessoa.repositorio.RepositorioPessoa;
+
+/**
+ * ServicoPessoaTest
+ */
+
+@ExtendWith(MockitoExtension.class)
+@SpringBootTest
+@ActiveProfiles("test")
+public class ServicoPessoaTest {
+
+  @Mock
+  private RepositorioPessoa repositorioPessoa;
+
+  @InjectMocks
+  private ServicoPessoa servicoPessoa;
+
+  @Test
+  void salvarUmaPessoaComEndereco() {
+
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+
+    String dataNasc = "03-06-1989";
+
+    Pessoa pessoa = new Pessoa();
+    Endereco endereco = new Endereco();
+    String nome = "Renan Alves";
+    LocalDate nascimento = LocalDate.parse(dataNasc, formatter);
+    String cpf = "123.456.789-00";
+
+    pessoa.setId(1L);
+    pessoa.setDataNascimento(nascimento);
+    pessoa.setCpf(cpf);
+    pessoa.setNome(nome);
+
+    endereco.setID(1L);
+    endereco.setEstado("RS");
+    endereco.setCidade("Alvorada");
+    endereco.setBairro("Algarve");
+    endereco.setRua("Zero Hora");
+    endereco.setNumero(1481);
+    endereco.setCEP("94858000");
+
+    pessoa.setEndereco(endereco);
+
+    assertEquals(pessoa.getDataNascimento().toString(), "1989-06-03");
+    assertEquals(pessoa.getEnderecos().getFirst(), endereco);
+    assertEquals(pessoa.getNome(), "Renan Alves");
+    assertEquals(pessoa.getCpf(), "123.456.789-00");
+
+  }
+}
