@@ -16,7 +16,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
 import br.tec.db.Pessoa.Servico.ServicoPessoa;
-import br.tec.db.Pessoa.dto.*;
 import br.tec.db.Pessoa.modelo.*;
 import br.tec.db.Pessoa.repositorio.RepositorioPessoa;
 

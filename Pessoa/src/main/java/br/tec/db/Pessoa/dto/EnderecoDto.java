@@ -1,16 +1,13 @@
 
 package br.tec.db.Pessoa.dto;
 
-import lombok.Data;
 
-@Data
-public class EnderecoDto {
+public record EnderecoDto(
+  String rua,
+  int numero,
+  String bairro,
+  String cidade,
+  String estado,
+  String cep
+){}
 
-  String rua;
-  int numero;
-  String bairro;
-  String cidade;
-  String estado;
-  String cep;
-
-}

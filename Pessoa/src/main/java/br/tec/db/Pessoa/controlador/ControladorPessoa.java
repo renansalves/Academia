@@ -1,8 +1,12 @@
 package br.tec.db.Pessoa.controlador;
 
+import java.net.URI;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import br.tec.db.Pessoa.Servico.ServicoPessoa;
 import br.tec.db.Pessoa.dto.PessoaDto;
@@ -24,11 +28,15 @@ public class ControladorPessoa {
   ServicoPessoa servicoPessoa;
 
   @PostMapping()
-  public ResponseEntity<PessoaDto> salvar(@RequestBody PessoaDto pessoaDto) {
+  public ResponseEntity<PessoaDto> salvarPessoa(@RequestBody PessoaDto pessoa) {
 
-    Pessoa pessoa = PessoaMapperInterface.INSTANCE.pessoa(pessoaDto);
-    PessoaDto retornoPessoaDto = servicoPessoa.salvarPessoa(pessoa);
-    return ResponseEntity.ok(retornoPessoaDto);
+    Pessoa pessoaEntidade = PessoaMapperInterface.INSTANCE.pessoa(pessoa);
+    PessoaDto pessoaDto = servicoPessoa.salvarPessoa(pessoaEntidade);
+
+    URI recurso = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(pessoaEntidade.getId())
+        .toUri();
+
+    return ResponseEntity.created(recurso).body(pessoaDto);
   }
 
 }

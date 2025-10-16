@@ -28,8 +28,8 @@ public class Pessoa {
 
 	private LocalDate dataNascimento;
 
-	@Pattern(regexp = "^\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}$", message = "CPF deve estar no formato xxx.xxx.xxx-xx")
 	@Column(nullable = false, unique = true)
+	@Pattern(regexp = "^\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}$", message = "CPF deve estar no formato xxx.xxx.xxx-xx")
 	private String cpf;
 
 	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
