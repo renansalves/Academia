@@ -1,5 +1,5 @@
 
-package br.tec.db.Pessoa.model;
+package br.tec.db.Pessoa.modelo;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

@@ -13,7 +13,7 @@ public class PessoaDto {
   String cpf;
   String nome;
   LocalDate dataNascimento;
-  List<EnderecoDto> endereco;
+  List<EnderecoDto> enderecos;
 
   public Boolean validaCpf(String cpf) {
     String pattern = "^\\d+.\\d+.\\d+-\\d+";
