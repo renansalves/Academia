@@ -1,6 +1,7 @@
 package br.tec.db.Pessoa.modelo;
 
 import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
 
 import br.tec.db.Pessoa.dto.PessoaDto;
@@ -15,6 +16,6 @@ public interface PessoaMapperInterface {
 
   PessoaDto pessoaDto(Pessoa pessoa);
 
-  Pessoa pessoa(PessoaDto pessoa);
-
+  @Mapping(target = "id", ignore = true)
+  Pessoa pessoa(PessoaDto pessoaDto);
 }

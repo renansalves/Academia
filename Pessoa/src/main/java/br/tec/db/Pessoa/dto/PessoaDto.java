@@ -4,10 +4,13 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.regex.Pattern;
 
+import lombok.Data;
+
 /**
  * PessoaDto
  */
 
+@Data
 public class PessoaDto {
 
   String cpf;

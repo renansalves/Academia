@@ -33,10 +33,7 @@ public class Pessoa {
 	private String cpf;
 
 	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-	@JoinColumn(name = "pessoa_id") // cria a FK em Endereco
+	@JoinColumn(name = "pessoa_id")
 	private List<Endereco> enderecos = new ArrayList<Endereco>();
 
-	public void setEndereco(Endereco endereco) {
-		this.enderecos.add(endereco);
-	}
 }
