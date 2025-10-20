@@ -25,10 +25,6 @@ import br.tec.db.Pessoa.dto.PessoaDto;
 @RequestMapping("pessoa")
 public class ControladorPessoa {
 
-  // Prática recomendada é usar Injeção via Construtor (Adicionar
-  // @RequiredArgsConstructor
-  // e tornar os campos 'final' ou usar um construtor explícito),
-  // mas mantendo @Autowired para consistência com o código original.
   @Autowired
   private ServicoPessoa servicoPessoa;
 
@@ -37,10 +33,9 @@ public class ControladorPessoa {
 
     PessoaDto pessoaSalva = servicoPessoa.salvarPessoa(pessoaDto);
 
-    // Constrói a URI para o recurso criado (padrão 201 Created)
     URI recurso = ServletUriComponentsBuilder.fromCurrentRequest()
         .path("{id}")
-        .buildAndExpand(pessoaSalva.id()) // Usa o ID do DTO retornado
+        .buildAndExpand(pessoaSalva.id())
         .toUri();
 
     return ResponseEntity.created(recurso).body(pessoaSalva);
@@ -54,29 +49,21 @@ public class ControladorPessoa {
 
   @GetMapping("{id}")
   public ResponseEntity<PessoaDto> obterPessoa(@PathVariable("id") Long id) {
-    // Se a Pessoa não for encontrada, o serviço lançará PessoaNotFoundException (->
-    // 404)
     PessoaDto pessoaDto = servicoPessoa.listarUmaPessoaPorId(id);
     return ResponseEntity.ok(pessoaDto);
   }
 
-  @PutMapping("{id}") // Novo método para atualização
+  @PutMapping("{id}")
   public ResponseEntity<PessoaDto> atualizarPessoa(@PathVariable("id") Long id, @RequestBody PessoaDto pessoaDto) {
     PessoaDto pessoaAtualizada = servicoPessoa.atualizarPessoa(id, pessoaDto);
 
-    // Retorna 200 OK ou 201 Created se o endpoint de atualização for o mesmo do
-    // POST.
-    // 200 OK é mais comum para PUT.
     return ResponseEntity.ok(pessoaAtualizada);
   }
 
-  @DeleteMapping("{id}") // Novo método para deleção
+  @DeleteMapping("{id}")
   public ResponseEntity<Void> deletarPessoa(@PathVariable("id") Long id) {
-    // Se a Pessoa não for encontrada, o serviço lançará PessoaNotFoundException (->
-    // 404)
     servicoPessoa.deletarPessoa(id);
 
-    // Retorna 204 No Content (padrão REST para deleção bem-sucedida)
     return ResponseEntity.noContent().build();
   }
 }
