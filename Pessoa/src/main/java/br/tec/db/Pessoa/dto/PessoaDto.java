@@ -1,25 +1,14 @@
 package br.tec.db.Pessoa.dto;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public record PessoaDto(
-    String nome,
-    String cpf,
-    LocalDate dataNascimento
+                long id,
+                String nome,
+                String cpf,
+                LocalDate dataNascimento,
+                List<EnderecoDto> enderecos
 
 ) {
 }
-// public class PessoaDto {
-//
-// String cpf;
-// String nome;
-// LocalDate dataNascimento;
-// List<EnderecoDto> enderecos;
-//
-// public Boolean validaCpf(String cpf) {
-// String pattern = "^\\d+.\\d+.\\d+-\\d+";
-//
-// return Pattern.matches(pattern, cpf);
-//
-// }
-// }
