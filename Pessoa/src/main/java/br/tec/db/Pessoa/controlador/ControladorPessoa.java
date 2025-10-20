@@ -17,6 +17,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import br.tec.db.Pessoa.Servico.ServicoPessoa;
 import br.tec.db.Pessoa.dto.PessoaDto;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * ControladorPessoa
@@ -28,7 +29,7 @@ public class ControladorPessoa {
   @Autowired
   private ServicoPessoa servicoPessoa;
 
-  @PostMapping
+  @PostMapping("/")
   public ResponseEntity<PessoaDto> salvarPessoa(@RequestBody PessoaDto pessoaDto) {
 
     PessoaDto pessoaSalva = servicoPessoa.salvarPessoa(pessoaDto);
@@ -41,14 +42,14 @@ public class ControladorPessoa {
     return ResponseEntity.created(recurso).body(pessoaSalva);
   }
 
-  @GetMapping
+  @GetMapping("/")
   public ResponseEntity<List<PessoaDto>> listarPessoas() {
     List<PessoaDto> pessoas = servicoPessoa.listarPessoas();
     return ResponseEntity.ok(pessoas);
   }
 
   @GetMapping("{id}")
-  public ResponseEntity<PessoaDto> obterPessoa(@PathVariable("id") Long id) {
+  public ResponseEntity<PessoaDto> BuscarPessoa(@PathVariable("id") Long id) {
     PessoaDto pessoaDto = servicoPessoa.listarUmaPessoaPorId(id);
     return ResponseEntity.ok(pessoaDto);
   }
@@ -66,4 +67,5 @@ public class ControladorPessoa {
 
     return ResponseEntity.noContent().build();
   }
+
 }

@@ -1,5 +1,7 @@
 package br.tec.db.Pessoa.Servico;
 
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -75,5 +77,16 @@ public class ServicoPessoa {
         .orElseThrow(() -> new PessoaNaoEncontradaExcecao("Pessoa não encontrada para deleção com id: " + id));
 
     repositorioPessoa.delete(pessoa);
+  }
+
+  public int calculaIdadePessoa(Long id) {
+    Pessoa pessoa = repositorioPessoa.findById(id)
+        .orElseThrow(() -> new PessoaNaoEncontradaExcecao("Pessoa não encontrada com id: " + id));
+
+    LocalDate hoje = LocalDate.now();
+    Period idade = Period.between(pessoa.getDataNascimento(), hoje);
+
+    return idade.getYears();
+
   }
 }
