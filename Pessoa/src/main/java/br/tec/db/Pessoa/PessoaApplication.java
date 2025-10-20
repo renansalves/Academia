@@ -1,13 +1,11 @@
 package br.tec.db.Pessoa;
-
-import java.text.ParseException;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class PessoaApplication {
 
-	public static void main(String[] args) throws ParseException {
+	public static void main(String[] args)  {
 		SpringApplication.run(PessoaApplication.class, args);
 
 	}

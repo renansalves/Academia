@@ -4,7 +4,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -14,8 +17,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
 import br.tec.db.Pessoa.Servico.ServicoPessoa;
-import br.tec.db.Pessoa.dto.*;
-import br.tec.db.Pessoa.model.*;
+import br.tec.db.Pessoa.modelo.*;
 import br.tec.db.Pessoa.repositorio.RepositorioPessoa;
 
 /**
@@ -34,6 +36,7 @@ public class ServicoPessoaTest {
   private ServicoPessoa servicoPessoa;
 
   @Test
+  @DisplayName("Testa salvar uma pessoa com Endereço")
   void salvarUmaPessoaComEndereco() {
 
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
@@ -51,15 +54,17 @@ public class ServicoPessoaTest {
     pessoa.setCpf(cpf);
     pessoa.setNome(nome);
 
-    endereco.setID(1L);
+    endereco.setId(1L);
     endereco.setEstado("RS");
     endereco.setCidade("Alvorada");
     endereco.setBairro("Algarve");
     endereco.setRua("Zero Hora");
     endereco.setNumero(1481);
-    endereco.setCEP("94858000");
+    endereco.setCep("94858000");
 
-    pessoa.setEndereco(endereco);
+    List<Endereco> listaEndereco = new ArrayList<Endereco>();
+    listaEndereco.add(endereco);
+    pessoa.setEnderecos(listaEndereco);
 
     assertEquals(pessoa.getDataNascimento().toString(), "1989-06-03");
     assertEquals(pessoa.getEnderecos().getFirst(), endereco);

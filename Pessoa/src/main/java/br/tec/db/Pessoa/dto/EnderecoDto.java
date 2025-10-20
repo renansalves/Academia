@@ -1,13 +1,13 @@
 
 package br.tec.db.Pessoa.dto;
 
-public class EnderecoDto {
 
-  String Rua;
-  int Número;
-  String Bairro;
-  String Cidade;
-  String Estado;
-  String CEP;
+public record EnderecoDto(
+  String rua,
+  int numero,
+  String bairro,
+  String cidade,
+  String estado,
+  String cep
+){}
 
-}

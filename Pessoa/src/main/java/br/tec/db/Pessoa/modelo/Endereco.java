@@ -1,5 +1,5 @@
 
-package br.tec.db.Pessoa.model;
+package br.tec.db.Pessoa.modelo;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -16,12 +16,12 @@ public class Endereco {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	long ID;
-	String Rua;
-	int Numero;
-	String Bairro;
-	String Cidade;
-	String Estado;
-	String CEP;
+	long id;
+	String rua;
+	int numero;
+	String bairro;
+	String cidade;
+	String estado;
+	String cep;
 
 }

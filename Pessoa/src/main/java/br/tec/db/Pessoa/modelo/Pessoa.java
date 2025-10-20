@@ -1,5 +1,5 @@
 
-package br.tec.db.Pessoa.model;
+package br.tec.db.Pessoa.modelo;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -28,15 +28,12 @@ public class Pessoa {
 
 	private LocalDate dataNascimento;
 
-	@Pattern(regexp = "^\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}$", message = "CPF deve estar no formato xxx.xxx.xxx-xx")
 	@Column(nullable = false, unique = true)
+	@Pattern(regexp = "^\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}$", message = "CPF deve estar no formato xxx.xxx.xxx-xx")
 	private String cpf;
 
 	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-	@JoinColumn(name = "pessoa_id") // cria a FK em Endereco
+	@JoinColumn(name = "pessoa_id")
 	private List<Endereco> enderecos = new ArrayList<Endereco>();
 
-	public void setEndereco(Endereco endereco) {
-		this.enderecos.add(endereco);
-	}
 }
