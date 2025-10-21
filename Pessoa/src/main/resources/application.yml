@@ -24,3 +24,13 @@ logging:
     org.hibernate.sql: DEBUG
         
 
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    path: /v3/api-docs
+  version: 1.0.0
+  info:
+    title: API de Cadastro de Pessoas
+    description: API CRUD para gerenciamento de informações pessoais e endereços.
+    version: v1

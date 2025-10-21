@@ -24,6 +24,8 @@ public class Pessoa {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 
+	private int idade;
+
 	private String nome;
 
 	private LocalDate dataNascimento;
